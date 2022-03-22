@@ -15,10 +15,12 @@ function compare(input_num){
     else if(input_num < sys_num){
         console.log("less than")
         document.getElementById('message').innerHTML = "📉 Too low!";
+        document.body.style.backgroundColor = "Red";
     }
     else if(input_num > sys_num){
         console.log("greater than")
         document.getElementById('message').innerHTML = "📈 Too high!";
+        document.body.style.backgroundColor = "Red";
     }    
 }
 
@@ -40,6 +42,7 @@ function change_score(){
 function reset(){
     score = 20;
     result = false;
+    sys_num = Math.floor(Math.random() * 20) + 1;
     document.getElementById("score").innerHTML = score;
     document.getElementById("message").innerHTML = "Start guessing...";
     document.body.style.backgroundColor = "#222";
