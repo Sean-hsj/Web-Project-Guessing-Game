@@ -24,6 +24,7 @@ function compare(input_num){
 
 function change_score(){
     // console.log(document.getElementById("score").value)
+    console.log(result);
     if (result == false){
         score -= 1; 
         document.getElementById("score").innerHTML = score;
@@ -37,9 +38,12 @@ function change_score(){
 }
 
 function reset(){
-    document.getElementById("score").innerHTML = 20;
-    document.getElementById("message").innerHTML = "Start guessing";
+    score = 20;
+    result = false;
+    document.getElementById("score").innerHTML = score;
+    document.getElementById("message").innerHTML = "Start guessing...";
     document.body.style.backgroundColor = "#222";
     document.getElementById("guess").value = "";
+
 }
 
